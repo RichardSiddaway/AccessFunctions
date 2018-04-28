@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.12" PIVersion="1.0.0.0" href="file:///C:\Users\Jamesone\Documents\windowsPowershell\PSH-Help.xsn" name="urn:schemas-microsoft-com:office:infopath:PSH-Help:" productVersion="14.0.0" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?><helpItems schema="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-07-13T15:24:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="en-gb">
+	<command:command>
+		<command:details>
+			<command:name>Add-AccessRecord</command:name>
+			<maml:description>
+				<maml:para>Adds a record to an Access table</maml:para>
+			</maml:description>
+			<maml:copyright>
+				<maml:para>(c) Macdui Consulting</maml:para>
+			</maml:copyright>
+			<command:verb>Add</command:verb>
+			<command:noun>AccessRecord</command:noun>
+			<dev:version>1.0</dev:version>
+		</command:details>
+		<maml:description>
+			<maml:para>Adds a record to an Access table</maml:para>
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>sql</maml:name>
+				<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+					<maml:name>sql</maml:name>
+					<maml:description>
+						<maml:para>A string containing an SQL INSERT statement that has the correct syntax, fields and data values defined</maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+					<dev:type>
+						<maml:name></maml:name>
+						<maml:uri></maml:uri>
+						<maml:description>
+							<maml:para></maml:para>
+						</maml:description>
+					</dev:type>
+					<dev:defaultValue></dev:defaultValue>
+				</command:parameter>
+			<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+									<maml:name>connection</maml:name>
+									<maml:description>
+										<maml:para>A connection to an open Access database. Create the connection using Open-AccessDatabase</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+		<command:syntaxItem>
+									<maml:name>field</maml:name>
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>fields</maml:name>
+										<maml:description>
+											<maml:para>A string containing the fields that will have data inserted</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter>
+								<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>connection</maml:name>
+									<maml:description>
+										<maml:para>A connection to an open Access database. Create the connection using Open-AccessDatabase</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>values</maml:name>
+									<maml:description>
+										<maml:para>A string containing the values to be inserted. This is a member of the fields and value parameter sets.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength=""></command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue>string</dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>table</maml:name>
+									<maml:description>
+										<maml:para>The Access table into which data will be inserted. This is a member of the fields and value parameter sets.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem><command:syntaxItem>
+									<maml:name>value</maml:name>
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>connection</maml:name>
+										<maml:description>
+											<maml:para>A connection to an open Access database. Create the connection using Open-AccessDatabase</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter>
+								<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>table</maml:name>
+									<maml:description>
+										<maml:para>A string containing the values to be inserted. This is a member of the fields and value parameter sets.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>values</maml:name>
+									<maml:description>
+										<maml:para>A string containing the values to be inserted. This is a member of the fields and value parameter sets.</maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem></command:syntax>
+		<command:parameters>
+			<command:parameter globbing="false" variableLength="" position="0" required="true" pipelineInput="false">
+				<maml:name>connection</maml:name>
+				<maml:description>
+					<maml:para>A connection to an open Access database. Create the connection using Open-AccessDatabase</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>table</maml:name>
+										<maml:description>
+											<maml:para>The Access table into which data will be inserted. This is a member of the fields and value parameter sets.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>values</maml:name>
+										<maml:description>
+											<maml:para>A string containing the values to be inserted. This is a member of the fields and value parameter sets.</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>sql</maml:name>
+										<maml:description>
+											<maml:para>A string containing an SQL INSERT statement that has the correct syntax, fields and data values defined</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>fields</maml:name>
+										<maml:description>
+											<maml:para>A string containing the fields that will have data inserted</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+		<command:inputTypes>
+			<command:inputType>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:inputType>
+		</command:inputTypes>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri></maml:uri>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+			</command:returnValue>
+		</command:returnValues>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			<maml:alert>
+				<maml:para></maml:para>
+			</maml:alert>
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>Example 1</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>Add-AccessRecord -sql 'insert into test1 values("James","Jones","18/04/1981")' -connection $db</dev:code>
+				<dev:remarks>
+					<maml:para>In this case a complete SQL INSERT statement is supplied. A subset of columns can be supplied values in this scenario. In all of these examples it is assumed that the fields and associated values are correct.</maml:para>
+				</dev:remarks>
+				<command:commandLines>
+					<command:commandLine>
+						<command:commandText></command:commandText>
+					</command:commandLine>
+				</command:commandLines>
+			</command:example>
+		<command:example>
+										<maml:title>Example 2</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>Add-AccessRecord -connection $db -table test1 -values '"Alex","Green","17/05/1981"'</dev:code>
+										<dev:remarks>
+											<maml:para>Only the values are supplied. In this case all of the columns in the row must have a value supplied.</maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example><command:example>
+										<maml:title>Example 3</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>Add-AccessRecord -connection $db -table test1 -fields "Firstname, lastname, DOB" -values "'Jo', 'Green', '24/11/1981'"</dev:code>
+										<dev:remarks>
+											<maml:para>This is a variation on Example 1 but we only need to supply the field list and the values.</maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example></command:examples>
+		<maml:relatedLinks>
+			<maml:navigationLink>
+				<maml:linkText></maml:linkText>
+				<maml:uri></maml:uri>
+			</maml:navigationLink>
+		</maml:relatedLinks>
+	</command:command>
+<command:command>
+									<command:details>
+										<command:name>New-AccessIndex</command:name>
+										<maml:description>
+											<maml:para>Creates a new index on the Access table</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Macdui Consulting</maml:para>
+										</maml:copyright>
+										<command:verb>New</command:verb>
+										<command:noun>AccessIndex</command:noun>
+										<dev:version>1.0</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Creates a new index on the Access table</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name></maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>table</maml:name>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>index</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>field</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>connection</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>unique</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>descend</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">switch</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>table</maml:name>
+											<maml:description>
+												<maml:para>The Access table into which data will be inserted.</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>index</maml:name>
+										<maml:description>
+											<maml:para>The name of the index to be created</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>field</maml:name>
+										<maml:description>
+											<maml:para>The name of the field to index</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>connection</maml:name>
+										<maml:description>
+											<maml:para>A connection to an open Access database. Create the connection using Open-AccessDatabase</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>unique</maml:name>
+										<maml:description>
+											<maml:para>Forces uniqueness on the column to be indexed</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>descend</maml:name>
+										<maml:description>
+											<maml:para>Creates a descending rather than ascending index</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">switch</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para></maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>Example 1</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>New-Accessindex -table test1 -index ID_IDX -field ID -connection $db -unique</dev:code>
+											<dev:remarks>
+												<maml:para>Creates a unique index on the ID field</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									<command:example>
+										<maml:title>Example 2</maml:title>
+										<maml:introduction>
+											<maml:para></maml:para>
+										</maml:introduction>
+										<dev:code>New-Accessindex -table test1 -index Name_IDX -field "lastname, firstname" 
+-connection $db </dev:code>
+										<dev:remarks>
+											<maml:para>Creates an index using both name fields</maml:para>
+										</dev:remarks>
+										<command:commandLines>
+											<command:commandLine>
+												<command:commandText></command:commandText>
+											</command:commandLine>
+										</command:commandLines>
+									</command:example></command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command><command:command>
+									<command:details>
+										<command:name>Remove-AccessIndex</command:name>
+										<maml:description>
+											<maml:para>Removes an access index</maml:para>
+										</maml:description>
+										<maml:copyright>
+											<maml:para>(c) Macdui Consulting</maml:para>
+										</maml:copyright>
+										<command:verb>Remove</command:verb>
+										<command:noun>AccessIndex</command:noun>
+										<dev:version>1.0</dev:version>
+									</command:details>
+									<maml:description>
+										<maml:para>Use this command to delete an access index.</maml:para>
+									</maml:description>
+									<command:syntax>
+										<command:syntaxItem>
+											<maml:name></maml:name>
+											<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+												<maml:name>table</maml:name>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+												<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+												<dev:type>
+													<maml:name></maml:name>
+													<maml:uri></maml:uri>
+													<maml:description>
+														<maml:para></maml:para>
+													</maml:description>
+												</dev:type>
+												<dev:defaultValue></dev:defaultValue>
+											</command:parameter>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>index</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+									<maml:name>connection</maml:name>
+									<maml:description>
+										<maml:para></maml:para>
+									</maml:description>
+									<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+									<dev:type>
+										<maml:name></maml:name>
+										<maml:uri></maml:uri>
+										<maml:description>
+											<maml:para></maml:para>
+										</maml:description>
+									</dev:type>
+									<dev:defaultValue></dev:defaultValue>
+								</command:parameter></command:syntaxItem>
+									</command:syntax>
+									<command:parameters>
+										<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+											<maml:name>table</maml:name>
+											<maml:description>
+												<maml:para>The name of the table from which one or more indexes will be removed</maml:para>
+											</maml:description>
+											<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<dev:defaultValue></dev:defaultValue>
+										</command:parameter>
+									<command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>index</maml:name>
+										<maml:description>
+											<maml:para>The name of the index to be removed</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">string</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter><command:parameter globbing="false" variableLength="" position="0" required="false" pipelineInput="false">
+										<maml:name>connection</maml:name>
+										<maml:description>
+											<maml:para>A connection to an open Access database. Create the connection using Open-AccessDatabase</maml:para>
+										</maml:description>
+										<command:parameterValue required="false" variableLength="">System.Data.OleDb.OleDbConnection</command:parameterValue>
+										<dev:type>
+											<maml:name></maml:name>
+											<maml:uri></maml:uri>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</dev:type>
+										<dev:defaultValue></dev:defaultValue>
+									</command:parameter></command:parameters>
+									<command:inputTypes>
+										<command:inputType>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:inputType>
+									</command:inputTypes>
+									<command:returnValues>
+										<command:returnValue>
+											<dev:type>
+												<maml:name></maml:name>
+												<maml:uri></maml:uri>
+												<maml:description>
+													<maml:para></maml:para>
+												</maml:description>
+											</dev:type>
+											<maml:description>
+												<maml:para></maml:para>
+											</maml:description>
+										</command:returnValue>
+									</command:returnValues>
+									<maml:alertSet>
+										<maml:title></maml:title>
+										<maml:alert>
+											<maml:para></maml:para>
+										</maml:alert>
+									</maml:alertSet>
+									<command:examples>
+										<command:example>
+											<maml:title>Example 1</maml:title>
+											<maml:introduction>
+												<maml:para></maml:para>
+											</maml:introduction>
+											<dev:code>Remove-AccessIndex -table test1 -index NAME_IDX -connection $db</dev:code>
+											<dev:remarks>
+												<maml:para>Removes a given access index</maml:para>
+											</dev:remarks>
+											<command:commandLines>
+												<command:commandLine>
+													<command:commandText></command:commandText>
+												</command:commandLine>
+											</command:commandLines>
+										</command:example>
+									</command:examples>
+									<maml:relatedLinks>
+										<maml:navigationLink>
+											<maml:linkText></maml:linkText>
+											<maml:uri></maml:uri>
+										</maml:navigationLink>
+									</maml:relatedLinks>
+								</command:command></helpItems>
